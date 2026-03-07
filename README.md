@@ -10,6 +10,19 @@ Modern frontend project built with **Pug, SCSS, and JavaScript**.
 - Node.js
 - Git
 
+## 👌
+for watch sass :
+sass --watch assets/scss:assets/css
+
+for pug : 
+
+install 
+npm install -g pug-cli
+
+run this : 
+pug -w ./blocks/pages/ -o ./ -P
+
+
 ## 📂 Project Structure
 ├───assets
 │   ├───css
