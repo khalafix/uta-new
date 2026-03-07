@@ -1,0 +1,15 @@
+extends ../layout.pug
+block head 
+    - var pageTitle = "Home Page"
+    - var pageDescription = "Test"       
+    - var pageKeywords = "Test"       
+    include ../head
+block body 
+    header 
+        include ../header
+    main 
+        include ../content/home
+block footer 
+    include ../footer
+block scripts 
+    include ../scripts

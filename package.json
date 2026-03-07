@@ -1,0 +1,8 @@
+{
+   "scripts": {
+    "sass": "sass --watch assets/scss:assets/css"
+  },
+  "dependencies": {
+    "pug": "^3.0.3"
+  }
+}

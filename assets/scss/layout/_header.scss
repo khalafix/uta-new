@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+header{
+    background-color: $primary-color    ;
+}
+.header__wrapper {
+    display: flex;
+align-items: center;
+  justify-content: space-around;
+    padding:16px 250px;
+
+
+    .dark-logo{
+        height:62px;
+    }
+    ul.mainmenu {
+        display: flex;
+        gap:20px;
+        align-items: center;
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color:$white;
+            font-weight: 400;
+        }
+    }
+    .sign-in-up{
+        font-size: 16px;
+        padding:10px 20px;
+        height:46px;
+        text-align: center;
+        vertical-align: middle;
+        color:$white;
+        border-radius: 34px;
+        background-color: $btn-color;
+    }
+}

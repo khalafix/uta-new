@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as *;
+.uta-footer{
+    min-height: 419px;
+  background-image: linear-gradient(to right, $primary-color , $priamry-dark-color);
+  
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
