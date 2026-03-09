@@ -1,29 +1,31 @@
 .header
     .container
         .header__wrapper 
-            .header__logo 
-                a(href="/")
-                    img.dark-logo(src="../assets/img/uta-logo-dark.svg" alt)
-            nav
-                ul.mainmenu 
-                    li
-                        a(href="#") Home
-                    li
-                        a(href="#") Industrial 
-                    li
-                        a(href="#") Products 
-                    li
-                        a(href="#") Services 
-                    li
-                        a(href="#") About Us 
-                    li
-                        a(href="#") Careers 
-                    li
-                        a(href="#") Blog
+            .header-left 
+                .header__logo 
+                    a(href="/")
+                        img.dark-logo(src="../assets/img/uta-logo-dark.svg" alt)
+                nav
+                    ul.mainmenu 
+                        li
+                            a(href="#") Home
+                        li
+                            a(href="#") Industrial 
+                        li
+                            a(href="#") Products 
+                        li
+                            a(href="#") Services 
+                        li
+                            a(href="#") About Us 
+                        li
+                            a(href="#") Careers 
+                        li
+                            a(href="#") Blog
 
-            button#search 
-                img(src="../assets/img/search-icon.svg")
-            button#lang 
-                img(src="../assets/img/search-icon.svg")
-            a.sign-in-up(href="/signin") Sign in / Sign up
+            .header-right
+                button#search 
+                    img(src="../assets/img/search-icon.svg")
+                button#lang 
+                    img(src="../assets/img/en-flag.svg")
+                a.sign-in-up(href="/signin") Sign in / Sign up
     

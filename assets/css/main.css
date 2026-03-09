@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -75,15 +76,99 @@ table {
   border-spacing: 0;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1440px; /* or a specific value */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; /* prevents content from touching screen edges on small screens */
+}
+
+/* Inter Light */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/static/Inter_28pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* Inter Regular */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/static/Inter_28pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Inter Medium */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/static/Inter_28pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Inter SemiBold */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/static/Inter_28pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Inter Bold */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/static/Inter_28pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Italic */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/static/Inter_28pt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Damion";
+  src: url("../fonts/Damion/Damion-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 header {
-  background-color: #1C425D;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 16px 250px;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.header__wrapper .header__logo {
+  margin-right: 20px;
+}
+.header__wrapper .header-left, .header__wrapper .header-right {
+  display: flex;
+  align-items: center;
+}
+.header__wrapper .header-right {
+  justify-content: end;
+}
+.header__wrapper .header-right button {
+  margin: 10px 5px;
+}
+.header__wrapper .header-right .sign-in-up {
+  margin-left: 10px;
 }
 .header__wrapper .dark-logo {
   height: 62px;
@@ -117,6 +202,274 @@ header {
   background-image: linear-gradient(to right, #1C425D, #011B2F);
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
+}
+
+/* Teko Light */
+@font-face {
+  font-family: "Teko";
+  src: url("../../assets/fonts/Teko/static/Teko-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* Teko Regular */
+@font-face {
+  font-family: "Teko";
+  src: url("../../assets/fonts/Teko/static/Teko-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Teko Medium */
+@font-face {
+  font-family: "Teko";
+  src: url("../../assets/fonts/Teko/static/Teko-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Teko SemiBold */
+@font-face {
+  font-family: "Teko";
+  src: url("../../assets/fonts/Teko/static/Teko-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Teko Bold */
+@font-face {
+  font-family: "Teko";
+  src: url("../../assets/fonts/Teko/static/Teko-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.slider {
+  background-color: #1C425D;
+  background-image: url("/assets/img/slider/uta-pattern-dark.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding-top: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-col {
+  text-align: center;
+}
+
+.slider-btn {
+  background-color: #05243A;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.slider__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 0 60px 0;
+  align-items: center;
+  gap: 40px;
+}
+
+.slider__images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.slider__images img {
+  border-radius: 30px;
+  width: 100%;
+  height: 497px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: translateY(-80px);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.img1 {
+  animation: slideDown 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.img2 {
+  animation: slideDown 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.img3 {
+  animation: slideDown 0.6s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.img1,
+.img2,
+.img3 {
+  height: 497px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img4 {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+
+.img6 {
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+
+.plane {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateX(300px) scale(0.8);
+  opacity: 0;
+  animation: planeLoop 8s linear infinite;
+}
+
+@keyframes planeLoop {
+  /* 1 ثانیه تاخیر (ایستادن بیرون صفحه) */
+  0% {
+    transform: translateX(300px) scale(0.8);
+    opacity: 0;
+  }
+  12.5% {
+    transform: translateX(300px) scale(0.8);
+    opacity: 0;
+  }
+  /* ورود هواپیما */
+  25% {
+    transform: translateX(0) scale(0.8);
+    opacity: 1;
+  }
+  /* 5 ثانیه توقف روی صفحه */
+  75% {
+    transform: translateX(0) scale(0.8);
+    opacity: 1;
+  }
+  /* خروج از سمت چپ */
+  100% {
+    transform: translateX(-120vw) scale(0.8);
+    opacity: 0;
+  }
+}
+.enjoy-dubai {
+  font-family: "Damion" !important;
+  color: #FFCC83;
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.slider-text {
+  font-family: "Teko" !important;
+  color: #ffffff;
+}
+
+.slider-sotitle {
+  font-size: 55px;
+}
+
+.slider-title {
+  font-weight: bold;
+  font-size: 75px;
+}
+
+.whychoose-uta {
+  min-height: 650px;
+  background-image: url("/assets/img/dot-map-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: -70px center;
+}
+.whychoose-uta .uta-col h2 {
+  color: #BD1680;
+  font-size: 32px;
+  padding: 20px 0;
+}
+.whychoose-uta .pl-30 {
+  margin-left: 60;
+}
+.whychoose-uta .uta-col p {
+  color: #656565;
+  line-height: 30px;
+  max-width: 409px;
+  text-align: justify;
+}
+.whychoose-uta .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.whychoose-uta .right-images img {
+  position: absolute;
+}
+.whychoose-uta .right-images {
+  position: relative;
+}
+.whychoose-uta .right-images .img7 {
+  top: 150px;
+  left: -50px;
+}
+.whychoose-uta .right-images .img8 {
+  top: -100px;
+  left: 20%;
+}
+.whychoose-uta .right-images .img9 {
+  right: -50px;
+  top: 150px;
+}
+
+.see-more {
+  border: 2px solid #BD1680;
+  border-radius: 20px;
+  padding: 10px 35px 10px 20px;
+  width: 150px;
+  margin-left: 60px;
+  margin-top: 60px;
+  color: #BD1680;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.see-more::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("/assets/img/right-arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+.see-more:hover {
+  background: #BD1680;
+  color: white;
+}
+.see-more:hover::after {
+  transform: translateY(-50%) translateX(5px);
+}
+
+.section-3 {
+  background-color: #1B4563;
+  height: 770px;
 }
 
 /*# sourceMappingURL=main.css.map */

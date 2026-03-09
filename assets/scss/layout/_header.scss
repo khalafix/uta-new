@@ -1,13 +1,30 @@
 @use "../abstracts/variables" as *;
 header{
-    background-color: $primary-color    ;
+    background-color: transparent;
+    position: fixed ;
+    width: 100%;
+    z-index: 99;
 }
 .header__wrapper {
     display: flex;
-align-items: center;
-  justify-content: space-around;
-    padding:16px 250px;
+    align-items: center;
+    justify-content: space-between;
+    padding:16px 0;
+    .header__logo{margin-right: 20px;}
+    .header-left , .header-right {
+        display: flex;
+        align-items: center;
 
+    }
+    .header-right{
+        justify-content: end;
+        button {
+            margin:10px 5px;
+        }
+        .sign-in-up{
+            margin-left:10px;
+        }
+    }
 
     .dark-logo{
         height:62px;
