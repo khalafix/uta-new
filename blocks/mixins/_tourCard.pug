@@ -1,9 +1,6 @@
 mixin hexIcon(icon,title,active=false)
 
   .hex(class=active ? 'active' : '')
-    svg(viewBox="0 0 100 100")
-      polygon(points="50 1 93 25 93 75 50 99 7 75 7 25")
-
     .hex-content
       img(src=icon)
       span=title

@@ -411,21 +411,19 @@ header {
   gap: 30px;
   margin-bottom: 70px;
 }
-
-.hex {
+.attraction-categories .hex {
   position: relative;
-  width: 110px;
-  height: 110px;
+  background-image: url("/assets/img/star-dark.svg");
+  background-repeat: no-repeat;
+  background-size: 163px;
+  background-position: center center;
+  width: 183px;
+  height: 183px;
   cursor: pointer;
   transition: 0.3s;
 }
-
-.hex svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  fill: #224f6c;
-  transition: 0.3s;
+.attraction-categories .hex:hover {
+  background-image: url("/assets/img/star-pink.svg");
 }
 
 .hex-content {
@@ -437,11 +435,6 @@ header {
   justify-content: center;
   color: white;
   font-size: 14px;
-}
-
-.hex img {
-  width: 28px;
-  margin-bottom: 6px;
 }
 
 .hex.active svg {
