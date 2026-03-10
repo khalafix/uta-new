@@ -1,8 +1,66 @@
 @use "../abstracts/variables" as *;
-.uta-footer{
-    min-height: 419px;
+
+.uta-footer {
+
+
+  min-height: 419px;
   background-image: linear-gradient(to right, $primary-color , $priamry-dark-color);
-  
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
+  
+  .container {
+    display: flex;
+    padding-top : 82px;
+    padding-bottom : 86px;
+    border-bottom: 3px solid $primary-pink;
+    justify-content: space-between;
+
+    .footer-left {
+      display: flex;
+    }
+    .footer-right{
+      display: flex;
+      align-items: center;
+      
+      nav ul.footer-menu{
+        display: flex;
+        gap:40px;
+        margin-right:30px;
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color:$white;
+            font-weight: 400;
+        }
+      }
+      .btn-readmore{
+        font-size: 16px;
+        padding:5px 40px;
+        text-align: center;
+        vertical-align: middle;
+        color:$white;
+        border-radius: 34px;
+        background-color: $btn-color;
+    }
+    }
+  }
+  .copyright {
+    color:$white;
+    .container {
+      padding:30px 0 60px 0 !important;
+      align-items: center;;
+      border:none;
+      .uta-social ul{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        img.icon{
+          width: 32px;
+
+        }
+      }
+    }
+  }
 }

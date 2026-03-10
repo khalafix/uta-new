@@ -203,6 +203,58 @@ header {
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
 }
+.uta-footer .container {
+  display: flex;
+  padding-top: 82px;
+  padding-bottom: 86px;
+  border-bottom: 3px solid #BD1680;
+  justify-content: space-between;
+}
+.uta-footer .container .footer-left {
+  display: flex;
+}
+.uta-footer .container .footer-right {
+  display: flex;
+  align-items: center;
+}
+.uta-footer .container .footer-right nav ul.footer-menu {
+  display: flex;
+  gap: 40px;
+  margin-right: 30px;
+}
+.uta-footer .container .footer-right nav ul.footer-menu li {
+  list-style: none;
+}
+.uta-footer .container .footer-right nav ul.footer-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+}
+.uta-footer .container .footer-right .btn-readmore {
+  font-size: 16px;
+  padding: 5px 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  border-radius: 34px;
+  background-color: #BD1680;
+}
+.uta-footer .copyright {
+  color: #ffffff;
+}
+.uta-footer .copyright .container {
+  padding: 30px 0 60px 0 !important;
+  align-items: center;
+  border: none;
+}
+.uta-footer .copyright .container .uta-social ul {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+.uta-footer .copyright .container .uta-social ul img.icon {
+  width: 32px;
+}
 
 /* Teko Light */
 @font-face {
