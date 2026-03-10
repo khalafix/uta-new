@@ -1,8 +1,9 @@
 include mixins/_icons
+include mixins/_tourCard
 html.no-js(lang="en" , dir="ltr")
     head 
         block head 
     body 
-        block body 
-        block footer 
-        block scripts
+        block body
+        include footer
+        include scripts

@@ -1,0 +1,170 @@
+.attractions{
+padding:140px 0;
+background:#f5f5f5;
+position:relative;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:60px;
+color:#c21c86;
+}.attraction-categories{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-bottom:70px;
+}
+
+.hex{
+position:relative;
+width:110px;
+height:110px;
+cursor:pointer;
+transition:.3s;
+}
+
+.hex svg{
+position:absolute;
+width:100%;
+height:100%;
+fill:#224f6c;
+transition:.3s;
+}
+
+.hex-content{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:14px;
+}
+
+.hex img{
+width:28px;
+margin-bottom:6px;
+}
+
+.hex.active svg{
+fill:#c21c86;
+}
+
+.hex:hover{
+transform:translateY(-8px);
+}
+
+.hex:hover svg{
+fill:#c21c86;
+}.attraction-slider{
+padding:30px 10px 60px;
+}.tour-card{
+
+background:white;
+
+border-radius:26px;
+
+padding:20px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+}
+
+.tour-card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+}.tour-image{
+position:relative;
+overflow:hidden;
+border-radius:18px;
+margin-bottom:15px;
+}
+
+.tour-image img{
+width:100%;
+display:block;
+transition:.4s;
+}
+
+.tour-card:hover img{
+transform:scale(1.08);
+}
+
+/* glass */
+
+.glass{
+position:absolute;
+inset:0;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
+opacity:0;
+transition:.35s;
+}
+
+.tour-card:hover .glass{
+opacity:1;
+}
+
+/* overlay button */
+
+.overlay-btn{
+
+position:absolute;
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%) scale(.8);
+
+background:#c21c86;
+color:white;
+
+padding:10px 22px;
+
+border-radius:30px;
+
+opacity:0;
+
+transition:.35s;
+}
+
+.tour-card:hover .overlay-btn{
+opacity:1;
+transform:translate(-50%,-50%) scale(1);
+}.tour-title{
+color:#c21c86;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.tour-price{
+font-size:14px;
+margin-bottom:16px;
+}
+
+.tour-price strong{
+font-size:20px;
+margin-left:4px;
+}
+
+.old{
+color:#999;
+margin-left:6px;
+}
+
+.btn-buy{
+display:block;
+background:#c21c86;
+color:white;
+padding:14px;
+border-radius:30px;
+font-weight:600;
+}

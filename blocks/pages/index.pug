@@ -9,9 +9,7 @@ block body
         include ../header
     main 
         include ../content/home
-block footer 
-    include ../footer
-block scripts 
-    include ../scripts
-        // Home Page Scripts
-        script(src="../../assets/js/modules/cloud-parallex.js")
+block pageScripts 
+  script(src="/assets/js/modules/cloud-parallex.js")
+  script(src="/assets/js/modules/accordion.js")
+  script(src='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js')
