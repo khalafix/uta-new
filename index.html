@@ -95,78 +95,351 @@
           <div class="uta-col right-images"><img class="img9 img-section" src="/assets/img/safari-img-01.png"/><img class="img8 img-section" src="/assets/img/girl-in-desert.png"/><img class="img7 img-section" src="/assets/img/burj-al-arab.png"/></div><a class="see-more" href="#"> See More</a>
         </div>
       </section>
-      <section class="attractions">
+      <section class="categories">
         <div class="container">
-          <h2 class="section-title">Top Attractions</h2>
-          <div class="attraction-categories">
-            <div class="hex active">
-              <div class="hex-content"><img src="/assets/img/visa-icon.svg"/><span>Visa</span></div>
-            </div>
-            <div class="hex">
-              <div class="hex-content"><img src="/assets/img/activity-icon.svg"/><span>Activity</span></div>
-            </div>
-            <div class="hex">
-              <div class="hex-content"><img src="/assets/img/hotel-icon.svg"/><span>Hotel</span></div>
-            </div>
-            <div class="hex">
-              <div class="hex-content"><img src="/assets/img/tour-icon.svg"/><span>Tour</span></div>
-            </div>
-            <div class="hex">
-              <div class="hex-content"><img src="/assets/img/car-icon.svg"/><span>Car</span></div>
-            </div>
-            <div class="hex">
-              <div class="hex-content"><img src="/assets/img/cruise-icon.svg"/><span>Cruise</span></div>
-            </div>
-          </div>
-          <div class="swiper attraction-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="tour-card">
-                  <div class="discount">20%</div>
-                  <div class="tour-image"><img src="/assets/img/desert.jpg"/>
-                    <div class="glass"></div>
-                    <div class="overlay-btn">View</div>
-                  </div>
-                  <h3 class="tour-title">Big Bus + Desert Safari</h3>
-                  <div class="tour-price"><span>Adult from</span><strong>US$72</strong><span class="old">(US$90)</span></div><a class="btn-buy">Buy Now</a>
-                </div>
+          <div class="attractions">
+            <!-- Tabs-->
+            <div class="attraction-categories" role="tablist">
+              <div class="hex active" role="tab" aria-selected="aria-selected" data-tab="visa" aria-controls="tab-panel-visa" id="tab-visa">
+                <div class="hex-content"><img src="/assets/img/visa-icon.svg"/><span>Visa</span></div>
               </div>
-              <div class="swiper-slide">
-                <div class="tour-card">
-                  <div class="discount">20%</div>
-                  <div class="tour-image"><img src="/assets/img/desert.jpg"/>
-                    <div class="glass"></div>
-                    <div class="overlay-btn">View</div>
-                  </div>
-                  <h3 class="tour-title">Big Bus + Desert Safari</h3>
-                  <div class="tour-price"><span>Adult from</span><strong>US$72</strong><span class="old">(US$90)</span></div><a class="btn-buy">Buy Now</a>
-                </div>
+              <div class="hex" role="tab" data-tab="activity" aria-controls="tab-panel-activity" id="tab-activity">
+                <div class="hex-content"><img src="/assets/img/activity-icon.svg"/><span>Activity</span></div>
               </div>
-              <div class="swiper-slide">
-                <div class="tour-card">
-                  <div class="discount">20%</div>
-                  <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
-                    <div class="glass"></div>
-                    <div class="overlay-btn">View</div>
-                  </div>
-                  <h3 class="tour-title">Big Bus + Desert Safari</h3>
-                  <div class="tour-price"><span>Adult from</span><strong>US$72</strong><span class="old">(US$90)</span></div><a class="btn-buy">Buy Now</a>
-                </div>
+              <div class="hex" role="tab" data-tab="hotel" aria-controls="tab-panel-hotel" id="tab-hotel">
+                <div class="hex-content"><img src="/assets/img/hotel-icon.svg"/><span>Hotel</span></div>
               </div>
-              <div class="swiper-slide">
-                <div class="tour-card">
-                  <div class="discount">20%</div>
-                  <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
-                    <div class="glass"></div>
-                    <div class="overlay-btn">View</div>
-                  </div>
-                  <h3 class="tour-title">Big Bus + Desert Safari</h3>
-                  <div class="tour-price"><span>Adult from</span><strong>US$72</strong><span class="old">(US$90)</span></div><a class="btn-buy">Buy Now</a>
-                </div>
+              <div class="hex" role="tab" data-tab="tour" aria-controls="tab-panel-tour" id="tab-tour">
+                <div class="hex-content"><img src="/assets/img/tour-icon.svg"/><span>Tour</span></div>
+              </div>
+              <div class="hex" role="tab" data-tab="car" aria-controls="tab-panel-car" id="tab-car">
+                <div class="hex-content"><img src="/assets/img/car-icon.svg"/><span>Car</span></div>
+              </div>
+              <div class="hex" role="tab" data-tab="cruise" aria-controls="tab-panel-cruise" id="tab-cruise">
+                <div class="hex-content"><img src="/assets/img/cruise-icon.svg"/><span>Cruise</span></div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- Panels-->
+            <div class="attraction-tab-panels">
+              <div class="attraction-tab-panel active" id="tab-panel-visa" data-tab-panel="visa" role="tabpanel" aria-labelledby="tab-visa">
+                <p class="attraction-tab-debug">Visa</p>
+                <div class="swiper attraction-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">25%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Visa Express Package</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$29</strong><span class="old">(US$39)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">20%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Dubai Tourist Visa (30 days)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$99</strong><span class="old">(US$129)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">25%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">UAE Visa Renewal Service</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$59</strong><span class="old">(US$79)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">25%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Airport Meet &amp; Assist (Visa)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$45</strong><span class="old">(US$60)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev">     </div>
+                </div>
+              </div>
+              <div class="attraction-tab-panel" id="tab-panel-activity" data-tab-panel="activity" role="tabpanel" aria-labelledby="tab-activity">
+                <p class="attraction-tab-debug">Activity</p>
+                <div class="swiper attraction-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">20%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Desert Safari Adventure</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$72</strong><span class="old">(US$90)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">28%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Sky Views Observatory Entry</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$18</strong><span class="old">(US$25)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">22%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Museum of the Future Ticket</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$35</strong><span class="old">(US$45)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">30%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Dubai Frame Experience</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$14</strong><span class="old">(US$20)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev">     </div>
+                </div>
+              </div>
+              <div class="attraction-tab-panel" id="tab-panel-hotel" data-tab-panel="hotel" role="tabpanel" aria-labelledby="tab-hotel">
+                <p class="attraction-tab-debug">Hotel</p>
+                <div class="swiper attraction-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">26%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">City Center 4★ Stay (1 Night)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$89</strong><span class="old">(US$120)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">20%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Marina View 5★ Stay (1 Night)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$169</strong><span class="old">(US$210)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">25%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Budget Hotel (1 Night)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$49</strong><span class="old">(US$65)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">20%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Family Suite Deal (1 Night)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$129</strong><span class="old">(US$160)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev">     </div>
+                </div>
+              </div>
+              <div class="attraction-tab-panel" id="tab-panel-tour" data-tab-panel="tour" role="tabpanel" aria-labelledby="tab-tour">
+                <p class="attraction-tab-debug">Tour</p>
+                <div class="swiper attraction-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">20%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Big Bus Hop-On Hop-Off Tour</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$72</strong><span class="old">(US$90)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">29%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Old Dubai Walking Tour</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$25</strong><span class="old">(US$35)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">23%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Burj Khalifa + City Tour Combo</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$99</strong><span class="old">(US$129)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">29%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Dubai Night City Tour</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$39</strong><span class="old">(US$55)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev">     </div>
+                </div>
+              </div>
+              <div class="attraction-tab-panel" id="tab-panel-car" data-tab-panel="car" role="tabpanel" aria-labelledby="tab-car">
+                <p class="attraction-tab-debug">Car</p>
+                <div class="swiper attraction-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">28%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Economy Car Rental (1 Day)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$35</strong><span class="old">(US$49)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">20%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">SUV Rental (1 Day)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$79</strong><span class="old">(US$99)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">22%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Luxury Sedan (1 Day)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$149</strong><span class="old">(US$190)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">29%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Airport Pickup (Car)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$25</strong><span class="old">(US$35)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev">     </div>
+                </div>
+              </div>
+              <div class="attraction-tab-panel" id="tab-panel-cruise" data-tab-panel="cruise" role="tabpanel" aria-labelledby="tab-cruise">
+                <p class="attraction-tab-debug">Cruise</p>
+                <div class="swiper attraction-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">27%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Marina Dinner Cruise</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$55</strong><span class="old">(US$75)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">26%</div>
+                        <div class="tour-image"><img src="/assets/img/desert.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Sunset Yacht Cruise</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$89</strong><span class="old">(US$120)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">29%</div>
+                        <div class="tour-image"><img src="/assets/img/desert2.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Creek Dhow Cruise</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$25</strong><span class="old">(US$35)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tour-card">
+                        <div class="discount">25%</div>
+                        <div class="tour-image"><img src="/assets/img/desert3.jpg"/>
+                          <div class="glass"></div>
+                          <div class="overlay-btn">View</div>
+                        </div>
+                        <h3 class="tour-title">Private Boat Charter (1 Hour)</h3>
+                        <div class="tour-price"><span>Adult from</span><strong>US$120</strong><span class="old">(US$160)</span></div><a class="btn-buy">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev">     </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -261,6 +534,30 @@
     <script src="/assets/js/modules/cloud-parallex.js"></script>
     <script src="/assets/js/modules/accordion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/js/modules/swipper.js"></script>
+    <script>
+      document.querySelectorAll('[data-tab]').forEach(tab=>{
+        tab.addEventListener('click',()=>{
+      
+          const id = tab.dataset.tab
+      
+          document.querySelectorAll('[role="tab"]').forEach(t=>{
+            t.classList.remove('active')
+            t.setAttribute('aria-selected','false')
+          })
+      
+          document.querySelectorAll('[data-tab-panel]').forEach(panel=>{
+            panel.classList.remove('active')
+          })
+      
+          tab.classList.add('active')
+          tab.setAttribute('aria-selected','true')
+      
+          document.querySelector(`[data-tab-panel="${id}"]`).classList.add('active')
+      
+        })
+      })
+    </script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

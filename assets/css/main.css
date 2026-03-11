@@ -393,8 +393,7 @@ header {
 }
 
 .attractions {
-  padding: 140px 0;
-  background: #f5f5f5;
+  padding: 40px 0;
   position: relative;
 }
 
@@ -426,6 +425,17 @@ header {
   background-image: url("/assets/img/star-pink.svg");
 }
 
+.attraction-tab-panels {
+  position: relative;
+}
+
+.attraction-tab-panel {
+  display: none;
+}
+.attraction-tab-panel.active {
+  display: block;
+}
+
 .hex-content {
   position: absolute;
   inset: 0;
@@ -435,6 +445,10 @@ header {
   justify-content: center;
   color: white;
   font-size: 14px;
+}
+
+.hex.active {
+  background-image: url("/assets/img/star-pink.svg");
 }
 
 .hex.active svg {
@@ -828,6 +842,33 @@ header {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.tab {
+  padding: 8px 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+}
+
+.tab.active {
+  background: #333;
+  color: #fff;
+}
+
+.content {
+  display: none;
+  margin-top: 20px;
+}
+
+.content.active {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

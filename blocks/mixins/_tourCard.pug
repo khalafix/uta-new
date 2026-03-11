@@ -1,6 +1,10 @@
-mixin hexIcon(icon,title,active=false)
-
-  .hex(class=active ? 'active' : '')
+mixin hexIcon(icon,title,active=false,tabId=false)
+  - var attrs = { class: active ? 'active' : '', role: 'tab', 'aria-selected': active };
+  if tabId
+    - attrs['data-tab'] = tabId;
+    - attrs['aria-controls'] = 'tab-panel-' + tabId;
+    - attrs['id'] = 'tab-' + tabId;
+  .hex&attributes(attrs)
     .hex-content
       img(src=icon)
       span=title

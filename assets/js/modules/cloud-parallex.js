@@ -7,10 +7,10 @@ document.addEventListener('mousemove', (e) => {
 
   clouds.forEach((cloud, index) => {
 
-    const speed = (index + 1) * 20
+    const speed = (index + 2) * 20
 
-    const moveX = (x + 1.5) * speed
-    const moveY = (y + 1.5) * speed
+    const moveX = (x + 0.5) * speed
+    const moveY = (y + 0.5) * speed
 
     cloud.style.transform = `translate(${moveX}px, ${moveY}px)`
 
