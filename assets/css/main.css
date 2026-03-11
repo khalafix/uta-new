@@ -393,7 +393,7 @@ header {
 }
 
 .attractions {
-  padding: 40px 0;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -408,10 +408,11 @@ header {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 .attraction-categories .hex {
   position: relative;
+  background-color: transparent;
   background-image: url("/assets/img/star-dark.svg");
   background-repeat: no-repeat;
   background-size: 163px;
@@ -427,6 +428,9 @@ header {
 
 .attraction-tab-panels {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 1105px;
 }
 
 .attraction-tab-panel {
@@ -468,98 +472,98 @@ header {
 }
 
 .tour-card {
-  background: white;
-  border-radius: 26px;
-  padding: 20px;
-  text-align: center;
+  background: url("/assets/img/ticket-bg.svg") no-repeat 0 0 transparent;
+  background-size: cover;
+  padding: 15px 30px;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
   transition: 0.35s;
 }
-
 .tour-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
-
-.tour-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  margin-bottom: 15px;
-}
-
-.tour-image img {
-  width: 100%;
-  display: block;
-  transition: 0.4s;
-}
-
-.tour-card:hover img {
-  transform: scale(1.08);
-}
-
-/* glass */
-.glass {
+.tour-card .discount {
+  width: 60px;
+  height: 60px;
+  padding: 18px 0;
+  border-radius: 50%;
   position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  transition: 0.35s;
+  top: 25px;
+  left: calc(50% - 30px);
+  text-align: center;
+  vertical-align: middle;
+  background-color: #BD1680;
+  color: #ffffff;
 }
-
-.tour-card:hover .glass {
-  opacity: 1;
+.tour-card img {
+  padding: 30px 0px 15px;
+  margin: 0 auto;
 }
-
-/* overlay button */
-.overlay-btn {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background: #c21c86;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 30px;
-  opacity: 0;
-  transition: 0.35s;
+.tour-card .tour-title {
+  color: #BD1680;
+  font-size: 24px;
+  text-align: center;
 }
-
-.tour-card:hover .overlay-btn {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+.tour-card .tour-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  gap: 16px;
+  font-size: 12px;
 }
-
-.tour-title {
-  color: #c21c86;
-  font-size: 18px;
-  margin-bottom: 10px;
+.tour-card .tour-score {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #656565;
+  white-space: nowrap;
 }
-
-.tour-price {
+.tour-card .tour-score .tour-rating-value {
+  font-weight: 600;
+  color: #BD1680;
+}
+.tour-card .tour-score .tour-stars {
+  display: flex;
+  gap: 2px;
+}
+.tour-card .tour-score .tour-stars .star {
   font-size: 14px;
-  margin-bottom: 16px;
+  color: #FFC107;
+  line-height: 1;
 }
-
-.tour-price strong {
-  font-size: 20px;
-  margin-left: 4px;
+.tour-card .tour-score .tour-rating-count {
+  color: #9b9b9b;
 }
-
-.old {
-  color: #999;
-  margin-left: 6px;
+.tour-card .tour-customers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-
-.btn-buy {
-  display: block;
-  background: #c21c86;
-  color: white;
-  padding: 14px;
-  border-radius: 30px;
+.tour-card .tour-customer-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  margin-left: -10px;
+}
+.tour-card .tour-customer-avatar:first-child {
+  margin-left: 0;
+}
+.tour-card .tour-customer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+}
+.tour-card .tour-customer-avatar.is-last {
+  background: #BD1680;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
   font-weight: 600;
 }
 
@@ -713,7 +717,6 @@ header {
 .has-world-bg {
   background-image: url("/assets/img/dot-map-bg.jpg");
   background-repeat: no-repeat;
-  background-position: -70px center;
 }
 
 .section-01 {
@@ -726,6 +729,9 @@ header {
 }
 .section-01 .pl-30 {
   margin-left: 60;
+}
+.section-01 .pb-150 {
+  padding-bottom: 250px;
 }
 .section-01 .uta-col p {
   color: #656565;
@@ -743,6 +749,34 @@ header {
 }
 .section-01 .right-images {
   position: relative;
+}
+.section-01 .right-images .reveal-item {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 700ms ease;
+}
+.section-01 .right-images .reveal-from-right {
+  transform: translate3d(60px, 0, 0);
+}
+.section-01 .right-images .reveal-from-top {
+  transform: translate3d(0, -60px, 0);
+}
+.section-01 .right-images .reveal-from-left {
+  transform: translate3d(-60px, 0, 0);
+}
+.section-01 .right-images.is-visible .reveal-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.section-01 .right-images.is-visible .img9 {
+  transition-delay: 0ms;
+}
+.section-01 .right-images.is-visible .img8 {
+  transition-delay: 160ms;
+}
+.section-01 .right-images.is-visible .img7 {
+  transition-delay: 320ms;
 }
 .section-01 .right-images .img7 {
   top: 150px;

@@ -1,5 +1,7 @@
+@use "../abstracts/variables" as *;
+
 .attractions {
-    padding: 40px 0;
+    padding: 10px 0;
     position: relative;
 }
 
@@ -14,12 +16,13 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
 
 
 
     .hex {
         position: relative;
+        background-color: transparent;
         background-image: url("/assets/img/star-dark.svg");
         background-repeat: no-repeat;
         background-size: 163px;
@@ -37,6 +40,9 @@
 
 .attraction-tab-panels {
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 1105px;
 }
 
 .attraction-tab-panel {
@@ -82,113 +88,111 @@
 
 .tour-card {
 
-    background: white;
-
-    border-radius: 26px;
-
-    padding: 20px;
-
-    text-align: center;
-
+    background: url("/assets/img/ticket-bg.svg") no-repeat 0 0 transparent;
+    background-size: cover;
+    padding: 15px 30px;
     position: relative;
-
-    overflow: hidden;
-
-    box-shadow: 0 10px 35px rgba(0, 0, 0, .08);
-
     transition: .35s;
-}
 
-.tour-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .15);
-}
+    &:hover {
+        transform: translateY(-12px);
 
-.tour-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 18px;
-    margin-bottom: 15px;
-}
+    }
+    .discount {
+        width: 60px;
+        height: 60px;
+        padding:18px 0;
+        border-radius: 50%;
+        position: absolute;
+        top : 25px;
+        left:calc(50% - 30px);
+text-align: center;
+vertical-align: middle;
+        background-color: $primary-pink;
+        color: $white;
+    }
 
-.tour-image img {
-    width: 100%;
-    display: block;
-    transition: .4s;
-}
+    img {
+        padding:30px 0px 15px;
+        margin: 0 auto;
+    }
+    .tour-title{
+        color:$primary-pink;
+        font-size: 24px;
+        text-align: center;
+    }
 
-.tour-card:hover img {
-    transform: scale(1.08);
-}
+    .tour-meta{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin:10px 0 20px;
+        gap:16px;
+        font-size:12px;
+    }
 
-/* glass */
+    .tour-score{
+        display:flex;
+        align-items:center;
+        gap:6px;
+        color:$text-color;
+        white-space:nowrap;
 
-.glass {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, .08);
-    backdrop-filter: blur(8px);
-    opacity: 0;
-    transition: .35s;
-}
+        .tour-rating-value{
+            font-weight:600;
+            color:$primary-pink;
+        }
 
-.tour-card:hover .glass {
-    opacity: 1;
-}
+        .tour-stars{
+            display:flex;
+            gap:2px;
 
-/* overlay button */
+            .star{
+                font-size:14px;
+                color:#FFC107; // طلایی
+                line-height:1;
+            }
+        }
 
-.overlay-btn {
+        .tour-rating-count{
+            color:#9b9b9b;
+        }
+    }
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    .tour-customers{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
 
-    transform: translate(-50%, -50%) scale(.8);
+    .tour-customer-avatar{
+        width:26px;
+        height:26px;
+        border-radius:50%;
+        overflow:hidden;
+        border:2px solid #fff;
+        box-shadow:0 0 0 1px rgba(0,0,0,.06);
+        margin-left:-10px;
 
-    background: #c21c86;
-    color: white;
+        &:first-child{
+            margin-left:0;
+        }
 
-    padding: 10px 22px;
+        img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            padding:0;
+        }
 
-    border-radius: 30px;
-
-    opacity: 0;
-
-    transition: .35s;
-}
-
-.tour-card:hover .overlay-btn {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.tour-title {
-    color: #c21c86;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.tour-price {
-    font-size: 14px;
-    margin-bottom: 16px;
-}
-
-.tour-price strong {
-    font-size: 20px;
-    margin-left: 4px;
-}
-
-.old {
-    color: #999;
-    margin-left: 6px;
-}
-
-.btn-buy {
-    display: block;
-    background: #c21c86;
-    color: white;
-    padding: 14px;
-    border-radius: 30px;
-    font-weight: 600;
+        &.is-last{
+            background:$primary-pink;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            font-size:11px;
+            font-weight:600;
+        }
+    }
 }

@@ -31,82 +31,76 @@ block body
       
       
         section.section-01.has-world-bg
-          .container
+          .container.pb-150
               .uta-col.pl-30
                 h2 Why Book a Dubai Bus Tour?
                 p Enjoy panoramic views as you explore Dubai’s modern skyline and historic districts. Our open-top buses let you hop on and off at the city’s most popular attractions. Live audio guides share fascinating stories and insights along the way. Comfortable seating and flexible routes make sightseeing easy and enjoyable. Capture unforgettable moments while discovering Dubai at your own pace.
       
               .uta-col.right-images
-                img.img9.img-section(src="/assets/img/safari-img-01.png")
-                img.img8.img-section(src="/assets/img/girl-in-desert.png")
-                img.img7.img-section(src="/assets/img/burj-al-arab.png")
+                img.img9.img-section.reveal-item.reveal-from-right(src="/assets/img/safari-img-01.png")
+                img.img8.img-section.reveal-item.reveal-from-top(src="/assets/img/girl-in-desert.png")
+                img.img7.img-section.reveal-item.reveal-from-left(src="/assets/img/burj-al-arab.png")
               a.see-more(href="#")  See More
-        section.categories
-          .container
+          - const attractionTabs = [{id:'visa1', icon:'/assets/img/visa-icon1.svg', id:'visa', icon:'/assets/img/visa-icon.svg', label:'Visa'},{ id:'activity', icon:'/assets/img/activity-icon.svg', label:'Activity'},{ id:'hotel', icon:'/assets/img/hotel-icon.svg', label:'Hotel'},{ id:'tour', icon:'/assets/img/tour-icon.svg', label:'Tour'},{ id:'car', icon:'/assets/img/car-icon.svg', label:'Car'},{ id:'cruise', icon:'/assets/img/cruise-icon.svg', label:'Cruise'}]
 
-            - const attractionTabs = [{ id:'visa', icon:'/assets/img/visa-icon.svg', label:'Visa'},{ id:'activity', icon:'/assets/img/activity-icon.svg', label:'Activity'},{ id:'hotel', icon:'/assets/img/hotel-icon.svg', label:'Hotel'},{ id:'tour', icon:'/assets/img/tour-icon.svg', label:'Tour'},{ id:'car', icon:'/assets/img/car-icon.svg', label:'Car'},{ id:'cruise', icon:'/assets/img/cruise-icon.svg', label:'Cruise'}]
+          .attractions
+            // Tabs
+            .attraction-categories(role="tablist")
+              each tab, i in attractionTabs
+                +hexIcon(tab.icon, tab.label, i === 0, tab.id)
+          // Panels
+          
+          .attraction-tab-panels
+            each tab, idx in attractionTabs
+              .attraction-tab-panel(
+                id='tab-panel-' + tab.id
+                data-tab-panel=tab.id
+                role="tabpanel"
+                class=(idx === 0 ? 'active' : '')
+                aria-labelledby='tab-' + tab.id
+              )
+                .swiper.attraction-slider
+                  .swiper-wrapper
 
-            .attractions
+                    if tab.id === 'visa'
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Big Bus + Desert Safari","29","39","15")
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Big Bus","29","39","25")
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Visa Express Package","29","39","25")
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Visa Express Package","29","39","25")
+                      
+                    else if tab.id === 'activity'
+                      +tourCard("/assets/img/attractions/deseart-safari-01.svg","Desert Safari Adventure","72","90","20")
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Desert Safari Adventure","72","90","20")
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Desert Safari Adventure","72","90","20")
+                      +tourCard("/assets/img/attractions/desert-safari-01.svg","Desert Safari Adventure","72","90","20")
+                      
+                      
+                    else if tab.id === 'hotel'
+                      +tourCard("/assets/img/desert2.jpg","Budget Hotel (1 Night)","49","65","25")
+                      +tourCard("/assets/img/desert.jpg","Marina View 5★ Stay (1 Night)","169","210","20")
+                      +tourCard("/assets/img/desert2.jpg","Budget Hotel (1 Night)","49","65","25")
+                     
+                    else if tab.id === 'tour'
+                      +tourCard("/assets/img/desert.jpg","Big Bus Hop-On Hop-Off Tour","72","90","20")
+                      +tourCard("/assets/img/desert3.jpg","Burj Khalifa + City Tour Combo","99","129","23")
+                      +tourCard("/assets/img/desert.jpg","Dubai Night City Tour","39","55","29")
+                    else if tab.id === 'car'
+                      +tourCard("/assets/img/desert2.jpg","Economy Car Rental (1 Day)","35","49","28")
+                      +tourCard("/assets/img/desert2.jpg","Old Dubai Walking Tour","25","35","29")
+                      +tourCard("/assets/img/desert2.jpg","Old Dubai Walking Tour","25","35","29")
+                    
+                    else if tab.id === 'cruise'
+                      +tourCard("/assets/img/desert3.jpg","Marina Dinner Cruise","55","75","27")
+                      +tourCard("/assets/img/desert.jpg","Sunset Yacht Cruise","89","120","26")
+                      +tourCard("/assets/img/desert.jpg","Sunset Yacht Cruise","89","120","26")
+                     
+                    else
+                      +tourCard("/assets/img/desert.jpg","Big Bus + Desert Safari 1","72","90","20")
+                      +tourCard("/assets/img/desert.jpg","Big Bus + Desert Safari 1","72","90","20")
+                     
 
-              // Tabs
-              .attraction-categories(role="tablist")
-                each tab, i in attractionTabs
-                  +hexIcon(tab.icon, tab.label, i === 0, tab.id)
-
-              // Panels
-              .attraction-tab-panels
-                each tab, idx in attractionTabs
-                  .attraction-tab-panel(
-                    id='tab-panel-' + tab.id
-                    data-tab-panel=tab.id
-                    role="tabpanel"
-                    class=(idx === 0 ? 'active' : '')
-                    aria-labelledby='tab-' + tab.id
-                  )
-
-                    p.attraction-tab-debug=tab.label
-
-                    .swiper.attraction-slider
-                      .swiper-wrapper
-
-                        if tab.id === 'visa'
-                          +tourCard("/assets/img/desert.jpg","Visa Express Package","29","39","25")
-                          +tourCard("/assets/img/desert2.jpg","Dubai Tourist Visa (30 days)","99","129","20")
-                          +tourCard("/assets/img/desert3.jpg","UAE Visa Renewal Service","59","79","25")
-                          +tourCard("/assets/img/desert.jpg","Airport Meet & Assist (Visa)","45","60","25")
-                        else if tab.id === 'activity'
-                          +tourCard("/assets/img/desert2.jpg","Desert Safari Adventure","72","90","20")
-                          +tourCard("/assets/img/desert3.jpg","Sky Views Observatory Entry","18","25","28")
-                          +tourCard("/assets/img/desert.jpg","Museum of the Future Ticket","35","45","22")
-                          +tourCard("/assets/img/desert2.jpg","Dubai Frame Experience","14","20","30")
-                        else if tab.id === 'hotel'
-                          +tourCard("/assets/img/desert3.jpg","City Center 4★ Stay (1 Night)","89","120","26")
-                          +tourCard("/assets/img/desert.jpg","Marina View 5★ Stay (1 Night)","169","210","20")
-                          +tourCard("/assets/img/desert2.jpg","Budget Hotel (1 Night)","49","65","25")
-                          +tourCard("/assets/img/desert3.jpg","Family Suite Deal (1 Night)","129","160","20")
-                        else if tab.id === 'tour'
-                          +tourCard("/assets/img/desert.jpg","Big Bus Hop-On Hop-Off Tour","72","90","20")
-                          +tourCard("/assets/img/desert2.jpg","Old Dubai Walking Tour","25","35","29")
-                          +tourCard("/assets/img/desert3.jpg","Burj Khalifa + City Tour Combo","99","129","23")
-                          +tourCard("/assets/img/desert.jpg","Dubai Night City Tour","39","55","29")
-                        else if tab.id === 'car'
-                          +tourCard("/assets/img/desert2.jpg","Economy Car Rental (1 Day)","35","49","28")
-                          +tourCard("/assets/img/desert3.jpg","SUV Rental (1 Day)","79","99","20")
-                          +tourCard("/assets/img/desert.jpg","Luxury Sedan (1 Day)","149","190","22")
-                          +tourCard("/assets/img/desert2.jpg","Airport Pickup (Car)","25","35","29")
-                        else if tab.id === 'cruise'
-                          +tourCard("/assets/img/desert3.jpg","Marina Dinner Cruise","55","75","27")
-                          +tourCard("/assets/img/desert.jpg","Sunset Yacht Cruise","89","120","26")
-                          +tourCard("/assets/img/desert2.jpg","Creek Dhow Cruise","25","35","29")
-                          +tourCard("/assets/img/desert3.jpg","Private Boat Charter (1 Hour)","120","160","25")
-                        else
-                          +tourCard("/assets/img/desert.jpg","Big Bus + Desert Safari","72","90","20")
-                          +tourCard("/assets/img/desert.jpg","Big Bus + Desert Safari","72","90","20")
-                          +tourCard("/assets/img/desert2.jpg","Big Bus + Desert Safari","72","90","20")
-                          +tourCard("/assets/img/desert3.jpg","Big Bus + Desert Safari","72","90","20")
-
-                      .swiper-button-next
-                      .swiper-button-prev      
+                  .swiper-button-next
+                  .swiper-button-prev      
 
         section.section-3
           .container
@@ -164,6 +158,7 @@ block body
 block pageScripts 
     script(src="/assets/js/modules/cloud-parallex.js")
     script(src="/assets/js/modules/accordion.js")
+    script(src="/assets/js/modules/section01-images-reveal.js")
 
     script(src='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js')
     script(src="/assets/js/modules/swipper.js")

@@ -19,13 +19,21 @@ mixin tourCard(image,title,price,oldPrice,discount)
       if discount
         .discount #{discount}%
 
-      .tour-image
+      .tour-image.shape
         img(src=image)
-
-        .glass
-        .overlay-btn View
-
       h3.tour-title=title
+      .tour-meta
+        .tour-score
+          span.tour-rating-value 4.8
+          .tour-stars
+            - for (var i = 0; i < 5; i++)
+              span.star *
+          span.tour-rating-count (320)
+        .tour-customers
+          - const avatars = ["/assets/img/customer-01.svg","/assets/img/customer-02.svg","/assets/img/customer-03.svg"]         
+          each avatar, idx in avatars
+            .avatar(class=idx === avatars.length - 1 ? 'is-last' : '')
+              img(src=avatar alt="Customer")
 
       .tour-price
         span Adult from
