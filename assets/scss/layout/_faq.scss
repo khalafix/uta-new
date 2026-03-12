@@ -15,9 +15,7 @@
   margin-bottom:30px;
 }
 
-.faq-wrapper{
-  max-width:520px;
-}
+
 
 .faq-item{
   background:#e7e7e7;
@@ -97,5 +95,16 @@
 
 .faq-right img{
   width:100%;
-  max-width:420px;
+}
+
+.faq-image-slide{
+  display:block;
+  transform:translateX(80px);
+  opacity:0;
+  transition:transform .6s ease, opacity .6s ease;
+}
+
+.faq-image-slide.is-visible{
+  transform:translateX(0);
+  opacity:1;
 }

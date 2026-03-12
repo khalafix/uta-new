@@ -36,8 +36,27 @@ mixin tourCard(image,title,price,oldPrice,discount)
               img(src=avatar alt="Customer")
 
       .tour-price
-        span Adult from
-        strong US$#{price}
-        span.old (US$#{oldPrice})
+        div
+          span Adult from
+          strong.price US$#{price}
+        span.old-price (US$#{oldPrice})
 
       a.btn-buy Buy Now
+
+      .tour-description 
+          h5 What's indclued: 
+          .tour-content 
+            ul 
+              li 24-hour hop-on, hop-off ticket
+              li Desert Safari:
+                ul 
+                  li - desert dune-bashing 
+                  li - luxurious desert camp 
+                  li - desert dune-bashing
+                  li - luxurious desert camp 
+                  li - traditional Arabian buffet & barbeque 
+                  li - henna painting, falconry, fire show, Tanoura dancing & more 
+                  li - hotel pick-up and drop-off
+              li Dhow Cruise
+              li Fully Flexible Bus Ticket (free date change)
+      a.btn-buy.read-more Buy Now

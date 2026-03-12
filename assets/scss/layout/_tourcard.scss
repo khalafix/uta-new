@@ -90,7 +90,7 @@
 
     background: url("/assets/img/ticket-bg.svg") no-repeat 0 0 transparent;
     background-size: cover;
-    padding: 15px 30px;
+    padding: 15px 30px 100px;
     position: relative;
     transition: .35s;
 
@@ -98,101 +98,121 @@
         transform: translateY(-12px);
 
     }
+
     .discount {
         width: 60px;
         height: 60px;
-        padding:18px 0;
+        padding: 18px 0;
         border-radius: 50%;
         position: absolute;
-        top : 25px;
-        left:calc(50% - 30px);
-text-align: center;
-vertical-align: middle;
+        top: 25px;
+        left: calc(50% - 30px);
+        text-align: center;
+        vertical-align: middle;
         background-color: $primary-pink;
         color: $white;
     }
 
     img {
-        padding:30px 0px 15px;
+        padding: 30px 0px 15px;
         margin: 0 auto;
     }
-    .tour-title{
-        color:$primary-pink;
+
+    .tour-title {
+        color: $primary-pink;
         font-size: 24px;
         text-align: center;
     }
 
-    .tour-meta{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        margin:10px 0 20px;
-        gap:16px;
-        font-size:12px;
+    .tour-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0 20px;
+        gap: 16px;
+        font-size: 12px;
     }
 
-    .tour-score{
-        display:flex;
-        align-items:center;
-        gap:6px;
-        color:$text-color;
-        white-space:nowrap;
+    .tour-price {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
 
-        .tour-rating-value{
-            font-weight:600;
-            color:$primary-pink;
+        &>div>span {
+            color: #9b9b9b;
         }
 
-        .tour-stars{
-            display:flex;
-            gap:2px;
+        .price {
+            margin-left: 5px;
+        }
 
-            .star{
-                font-size:14px;
-                color:#FFC107; // طلایی
-                line-height:1;
+    }
+
+    .tour-score {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: $text-color;
+        white-space: nowrap;
+
+        .tour-rating-value {
+            font-weight: 600;
+            color: $primary-pink;
+        }
+
+        .tour-stars {
+            display: flex;
+            gap: 2px;
+
+            .star {
+                font-size: 14px;
+                color: #FFC107; // طلایی
+                line-height: 1;
             }
         }
 
-        .tour-rating-count{
-            color:#9b9b9b;
+        .tour-rating-count {
+            color: #9b9b9b;
         }
     }
 
-    .tour-customers{
-        display:flex;
-        align-items:center;
-        justify-content:flex-end;
-    }
+    .tour-customers {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
-    .tour-customer-avatar{
-        width:26px;
-        height:26px;
-        border-radius:50%;
-        overflow:hidden;
-        border:2px solid #fff;
-        box-shadow:0 0 0 1px rgba(0,0,0,.06);
-        margin-left:-10px;
-
-        &:first-child{
-            margin-left:0;
-        }
-
-        img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            padding:0;
-        }
-
-        &.is-last{
-            background:$primary-pink;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#fff;
-            font-size:11px;
-            font-weight:600;
+        .avatar {
+            img {
+                padding: 0;
+            }
         }
     }
+
+
+
+    .btn-buy {
+        color: $white;
+        background-color: $primary-pink;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0;
+        display: block;
+        border-radius: 30px;
+    }
+    .read-more{
+        background-color:#ACACAC;
+    }
+    .tour-description {
+        padding:10px 0 ;
+        h5 {
+            font-size: 16px;
+        }
+
+        .tour-content {
+            padding-left:10px;
+            color: #777777 !important;
+
+        }
+    }
+
 }

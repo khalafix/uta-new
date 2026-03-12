@@ -4,6 +4,12 @@ header{
     position: fixed ;
     width: 100%;
     z-index: 99;
+    transition: background-color .3s ease, box-shadow .3s ease;
+}
+
+header.header--scrolled{
+    background-color: $primary-dark-blue;
+    box-shadow: 0 6px 18px rgba(0,0,0,.25);
 }
 .header__wrapper {
     display: flex;
