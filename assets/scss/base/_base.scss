@@ -1,11 +1,30 @@
 @use "../abstracts/variables" as *;
+
+html,
 body {
-    // background-color: $primary-color ;
-    font-family: "Inter", sans-serif;
+
+  // background-color: $primary-color ;
+  font-family: "Inter", sans-serif;
 }
+
 .container {
-  max-width: 1440px; /* or a specific value */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px; /* prevents content from touching screen edges on small screens */
+  max-width: $bp-max-width;
+  /* or a specific value */
+  padding: 0 20px;
+  /* prevents content from touching screen edges on small screens */
+}
+
+@media (min-width: $bp-default-width) {
+  .container {
+    max-width: $bp-default-width;
+  }
+}
+
+@media (max-width: $bp-tablet) {
+  .container {
+    overflow-y: hidden;
+  }
+
 }

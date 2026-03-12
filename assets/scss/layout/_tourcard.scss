@@ -12,6 +12,13 @@
     color: #c21c86;
 }
 
+@media (max-width: $bp-mobile) {
+    .section-title {
+        font-size: 26px;
+        margin-bottom: 32px;
+    }
+}
+
 .attraction-categories {
     display: flex;
     justify-content: center;
@@ -38,11 +45,36 @@
     }
 }
 
+@media (max-width: $bp-tablet) {
+    .attraction-categories {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .attraction-categories .hex {
+        width: 140px;
+        height: 140px;
+        background-size: 130px;
+    }
+}
+
+@media (max-width: $bp-mobile) {
+    .attraction-categories {
+        gap: 16px;
+    }
+}
+
 .attraction-tab-panels {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
     height: 1105px;
+}
+
+@media (max-width: $bp-tablet) {
+    .attraction-tab-panels {
+        height: auto;
+    }
 }
 
 .attraction-tab-panel {
@@ -215,4 +247,35 @@
         }
     }
 
+}
+
+@media (max-width: $bp-tablet) {
+    .tour-card {
+        padding: 15px 20px 80px;
+        background-size: contain;
+    }
+}
+
+@media (max-width: $bp-mobile) {
+    .attractions {
+        padding: 40px 0;
+    }
+
+    .attraction-slider {
+        padding-bottom: 40px;
+    }
+
+    .tour-card {
+        padding: 12px 16px 70px;
+    }
+
+    .tour-title {
+        font-size: 18px;
+    }
+
+    .tour-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }

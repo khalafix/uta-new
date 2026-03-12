@@ -1,31 +1,61 @@
 .header
     .container
-        .header__wrapper 
-            .header-left 
-                .header__logo 
+        .header__wrapper
+            .header-left
+                .header__logo
                     a(href="/")
-                        img.dark-logo(src="../assets/img/uta-logo-dark.svg" alt)
-                nav
-                    ul.mainmenu 
+                        img.dark-logo(src="../assets/img/uta-logo-dark.svg" alt="Uber Travel Agency")
+                nav.header-nav
+                    ul.mainmenu
                         li
                             a(href="#") Home
                         li
-                            a(href="#") Industrial 
+                            a(href="#") Industrial
                         li
-                            a(href="#") Products 
+                            a(href="#") Products
                         li
-                            a(href="#") Services 
+                            a(href="#") Services
                         li
-                            a(href="#") About Us 
+                            a(href="#") About Us
                         li
-                            a(href="#") Careers 
+                            a(href="#") Careers
                         li
                             a(href="#") Blog
 
+            button.header-hamburger(type="button" aria-label="Open menu" aria-expanded="false")
+                span
+                span
+                span
+
             .header-right
-                button#search 
-                    img(src="../assets/img/search-icon.svg")
-                button#lang 
-                    img(src="../assets/img/en-flag.svg")
+                button.header-btn-icon#search(aria-label="Search")
+                    img(src="../assets/img/search-icon.svg" alt="")
+                button.header-btn-icon#lang(aria-label="Language")
+                    img(src="../assets/img/en-flag.svg" alt="")
                 a.sign-in-up(href="/signin") Sign in / Sign up
-    
+
+    .header-drawer(aria-hidden="true")
+        .header-drawer__inner
+            nav.header-drawer__nav
+                ul.mainmenu
+                    li
+                        a(href="#") Home
+                    li
+                        a(href="#") Industrial
+                    li
+                        a(href="#") Products
+                    li
+                        a(href="#") Services
+                    li
+                        a(href="#") About Us
+                    li
+                        a(href="#") Careers
+                    li
+                        a(href="#") Blog
+            .header-drawer__actions
+                button.header-drawer__btn#search-drawer(aria-label="Search")
+                    img(src="../assets/img/search-icon.svg" alt="")
+                    span Search
+                button.header-drawer__btn#lang-drawer(aria-label="Language")
+                    img(src="../assets/img/en-flag.svg" alt="")
+                    span Language

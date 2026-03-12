@@ -1,40 +1,44 @@
 footer.uta-footer
     .container
-        .footer-left    
-            .footer__logo 
+        .footer-left
+            .footer__logo
                 a(href="/")
                     img.dark-logo(src="../assets/img/uta-logo-dark.svg" alt)
 
         .footer-right
-            nav
-                ul.footer-menu
-                    li
-                        a(href="#") Home
-                    li
-                        a(href="#") Shop
-                    li
-                        a(href="#") About Us
-                    li
-                        a(href="#") Blog
-                    li
-                        a(href="#") Contact Us
-            a.btn-readmore(href="/products") See More
+            button.footer-accordion-trigger(type="button" aria-expanded="false" aria-controls="footer-menu-content")
+                span.footer-accordion-trigger__label Quick Links
+                span.footer-accordion-trigger__icon(aria-hidden="true")
+            #footer-menu-content.footer-right__content
+                nav
+                    ul.footer-menu
+                        li
+                            a(href="#") Home
+                        li
+                            a(href="#") Shop
+                        li
+                            a(href="#") About Us
+                        li
+                            a(href="#") Blog
+                        li
+                            a(href="#") Contact Us
+                a.btn-readmore(href="/products") See More
+
     .copyright
         .container
-            .copyright-text 
+            .copyright-text
                 p © 2026, All Rights Reserve.
             .uta-social
                 ul
-                    li 
-                        a(href="#") 
+                    li
+                        a(href="#")
                             +icon("facebook")
-                    li 
+                    li
                         a(href="#")
                             +icon("telegram-app")
-                    li 
+                    li
                         a(href="#")
-                             +icon("instagram")
-                    li 
+                            +icon("instagram")
+                    li
                         a(href="#")
-                             +icon("whatsapp")
-
+                            +icon("whatsapp")
